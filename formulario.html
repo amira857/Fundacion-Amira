@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +18,42 @@
 
       <div class="card shadow">
         <div class="card-body">
+          <div class="text-center mb-4">
+  <img 
+    src="./img/Amira-Hassan.webp"
+    alt="Amira Hassan"
+    class="rounded-circle shadow mb-2"
+    style="width: 140px; height: 140px; object-fit: cover;"
+  >
+
+  <div class="d-flex justify-content-center align-items-center gap-1">
+    <strong class="fs-5">Amira Hassan</strong>
+    <span 
+      title="Perfil verificado"
+      style="
+        background:#1d9bf0;
+        color:white;
+        border-radius:50%;
+        width:18px;
+        height:18px;
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        font-size:12px;
+        font-weight:bold;
+      "
+    >
+      ✓
+    </span>
+  </div>
+
+  <div 
+    style="font-size:14px; color:#555; direction:rtl;"
+  >
+    أميرة حسن
+  </div>
+</div>
+
 
           <h3 class="mb-4 text-center">Formulario de Solicitud de Ayuda</h3>
 
@@ -103,7 +141,7 @@
             </div>
 
             <p class="text-muted" id="impuestoTexto" style="display:none;">
-              El 1.3% del monto solicitado corresponde a
+              El monto solicitado corresponde a
               <strong>$<span id="impuestoValor">0</span> USD</strong>
               por concepto de impuestos.
             </p>
@@ -163,7 +201,7 @@ paisSelect.addEventListener("change", () => {
 montoInput.addEventListener("input", () => {
   const monto = parseFloat(montoInput.value);
   if (!isNaN(monto) && monto > 0) {
-    const impuesto = monto * 0.013;
+    const impuesto = monto * 0.01;
     impuestoValor.textContent = impuesto.toFixed(2);
     impuestoTexto.style.display = "block";
   } else {
